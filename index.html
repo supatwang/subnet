@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <script src="./computing.js"></script>
+  <h1>IP Subnet Calculator</h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <hr>
+      <form id="form_network_class" action="javascript:changeSubnet();">
+          Network Class
+          <input name="network_class" type="radio" value="A" onclick="this.form.submit();" style="margin-left"> A
+          <input name="network_class" type="radio" value="B" onclick="this.form.submit();" style="margin-left"> B
+          <input name="network_class" type="radio" value="C" onclick="this.form.submit();" style="margin-left"> C
+      	  <input name="network_class" type="radio" value="any" onclick="this.form.submit();" checked> Any
+      </form>
+      <form id="form_calculate" action="javascript:get_result();">
+          Subnet
+          <select class="decorated"name="subnet" id="subnet" >
+            <script> javascript:createChoice(1); </script>
+          </select>
+          IP Address
+          <input id="IP_Address" type="text"  pattern="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
+          <br>
+          <br>
+          <button type="submit"> Calculate!! </button>
+      </form>
+    </table>
+  </div>
+
+  <div class="row" id="result">
+    <div id="div-table-2" >
+    </div>
+
+    <div id="div-table-3" >
+    </div>
+
+</body>
+
+</html>
+  
